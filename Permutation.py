@@ -31,27 +31,27 @@ def PermutationsUsingIterative(str):
         Return:
             returns list of all permutations
     """
-    n = len(str)
+    length = len(str)
     permutations_iteration = []
-    no_of_permutations = find_factorial(n); 
+    no_of_permutations = find_factorial(length); 
     for i in range(no_of_permutations):
         chars = list(str)        
         temp = i
-        div = n
-        s = ""
+        div = length
+        result_str = ""
         while div >= 1:            
             quotient = int(temp/div)
             remainder = int(temp%div)
-            s = s + chars[remainder]
+            result_str = result_str + chars[remainder]
             chars.remove(chars[remainder])            
             temp = quotient
             div -= 1
-        permutations_iteration.append(s)
+        permutations_iteration.append(result_str)
     return permutations_iteration
 
 
 list_recursive = []
-def PermutationsUsingRecursion(s,ans):
+def PermutationsUsingRecursion(input_str,ans):
     """ 
         Description: 
             This function is generating string permutation using Recursive method
@@ -61,15 +61,15 @@ def PermutationsUsingRecursion(s,ans):
             returns list of all permutations
     """
     global list_recursive
-    if(len(s) == 0): 
+    if(len(input_str) == 0): 
         list_recursive.append(ans)
         return
     for i in range(len(s)):
-        c = s[i]
-        left = s[0:i]
-        right = s[i+1:]
+        char_value = input_str[i]
+        left = input_str[0:i]
+        right = input_str[i+1:]
         result = left + right
-        PermutationsUsingRecursion(result, ans+c)
+        PermutationsUsingRecursion(result, ans+char_value)
 
 # Main Code 
 str = input("Enter any string : ")
