@@ -21,7 +21,8 @@ def distance(x,y):
 # Taking input from user
 # x = int(input("Enter x coordinate : "))
 # y = int(input("Enter y coordinate : "))
-x = int(sys.argv[1])
+# Command Line Argument
+x = int(sys.argv[1]) 
 y = int(sys.argv[2])
 # Calling Function
 result = distance(x,y)
