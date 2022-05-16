@@ -22,8 +22,8 @@ def distance(x,y):
 # x = int(input("Enter x coordinate : "))
 # y = int(input("Enter y coordinate : "))
 # Command Line Argument
-x = int(sys.argv[1]) 
-y = int(sys.argv[2])
+x_coordinate = int(sys.argv[1]) 
+y_coordinate  = int(sys.argv[2])
 # Calling Function
-result = distance(x,y)
+result = distance(x_coordinate,y_coordinate)
 print(f"\nEuclidean distance from the point ({x},{y}) to the origin (0,0) is : {result}")
