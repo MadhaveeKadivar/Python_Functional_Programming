@@ -5,7 +5,7 @@
     @Last Modified time: 2022-05-13 5:24:56
     @Title : Harmonic Number
 '''
-def harmonic(no):
+def harmonic(number):
     """ 
         Description: 
             This function is calculating harmonic value of nth number
@@ -15,9 +15,9 @@ def harmonic(no):
             Harmonic value
     """
     result = 0
-    for i in range(1,no+1):
+    for i in range(1,number+1):
         result += (1/i)
     return result
-no = int(input("\nEnter number you want find Harmonic Value upto this : "))
-value = harmonic(no) #Calling Function 
-print(f"\n{no}th harmonic value is : {value}")
+number = int(input("\nEnter number you want find Harmonic Value upto this : "))
+value = harmonic(number) #Calling Function 
+print(f"\n{number}th harmonic value is : {value}")
