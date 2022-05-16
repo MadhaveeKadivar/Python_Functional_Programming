@@ -7,6 +7,7 @@
 '''
 # Importing Math Module
 import math
+import sys
 def distance(x,y):
     """ 
         Description: 
@@ -18,8 +19,10 @@ def distance(x,y):
     """
     return math.sqrt(math.pow(x, 2) + math.pow(y, 2))
 # Taking input from user
-x = int(input("Enter x coordinate : "))
-y = int(input("Enter y coordinate : "))
+# x = int(input("Enter x coordinate : "))
+# y = int(input("Enter y coordinate : "))
+x = int(sys.argv[1])
+y = int(sys.argv[2])
 # Calling Function
 result = distance(x,y)
 print(f"\nEuclidean distance from the point ({x},{y}) to the origin (0,0) is : {result}")
