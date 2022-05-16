@@ -8,7 +8,7 @@
 # Importing module of array
 import array as arr
 
-def find(arr, n):  
+def find(arr, total_numbers):  
     """ 
         Description: 
             This function is finding triplets where sum of three integer add to zero
@@ -18,21 +18,21 @@ def find(arr, n):
             returns list of triplets
     """ 
     list = []
-    for i in range(0, n-2):              
-        for j in range(i+1, n-1):           
-            for k in range(j+1, n):               
+    for i in range(0, total_numbers-2):              
+        for j in range(i+1, total_numbers-1):           
+            for k in range(j+1, total_numbers):               
                 if (arr[i] + arr[j] + arr[k] == 0): 
                    # print(arr[i], arr[j], arr[k]) 
                     tuple_items = (arr[i],arr[j],arr[k])
                     list.append(tuple_items)
     return list  
 # Taking number from user and add to array
-a = arr.array('i', [])
-n = int(input("\nEnter how many numbers you want to add in array : "))
-for i in range(n):
-    no = int(input(f"Enter {i} th number : "))
-    a.append(no)
+num_array = arr.array('i', [])
+total_numbers = int(input("\nEnter how many numbers you want to add in array : "))
+for i in range(total_numbers):
+    number = int(input(f"Enter {i} th number : "))
+    num_array.append(number)
 # Calling function
-result = find(a, n)
+result = find(num_array, total_numbers)
 print(f"\nTotal Number of triplets : {len(result)}")
 print(f"\nList of triplets are : {result}")
