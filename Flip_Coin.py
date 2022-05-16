@@ -34,6 +34,6 @@ number_of_flips=int(input("\nEnter number of times you want to flip coin : "))
 # Flipping coin 
 flip_coin(number_of_flips) # calling function
 # Calculating Percentage
-h = (heads/(number_of_flips))*100
-print(f"\n\nHeads Percentages after fliping coin {number_of_flips} times  : {h} % ")
-print(f"\nTails Percentages after fliping coin {number_of_flips} times  : {100-h} %")
+head_percentage = (heads/(number_of_flips))*100
+print(f"\n\nHeads Percentages after fliping coin {number_of_flips} times  : {head_percentage} % ")
+print(f"\nTails Percentages after fliping coin {number_of_flips} times  : {100-head_percentage} %")
