@@ -10,28 +10,30 @@ import random
 def random_numbers(length):
     """ 
         Description: 
-            This function is generating random numbers to cover all the distinct coupon number present in list
+            This function is generating distinct digit coupon number
         Parameter:
-            It takes number of distinct numbers
+            It takes total number of digits
         Return:
-            List of distinct coupon numbers
+            number which have distinct digit
     """
-    distinct_coupon_numbers = []
+    numbers_digits = []
     global count
-    while True: #This loop continue till all the distinct numbers will cover
-        random_number = random.randint(0,100) # Generating Random Number
-        if random_number in distinct_coupon_numbers: # checks if random number is already present in arry or not
+    while len(numbers_digits) != length: #This loop continue till all the distinct numbers will cover
+        random_number = random.randint(0,9) # Generating Random Number
+        print(random_number)
+        if random_number in numbers_digits: # checks if random number is already present in arry or not
+            count += 1
             continue
         else:
-            distinct_coupon_numbers.append(random_number)# If present then remove this element from array
-        count += 1
-        if len(distinct_coupon_numbers) == length:          
-            break            
-    return distinct_coupon_numbers
+            numbers_digits.append(random_number)# If present then remove this element from array
+            count += 1   
+    num = int("".join(map(str, numbers_digits)))
+    return num
+# Main Code
 count = 0
-total_distinct_numbers = int(input("\nHow many numbers you want to generate distinct coupon numbers : "))
-list_of_distinct_numbers=random_numbers(total_distinct_numbers)
-print(f"\nDistinct coupon number are : {list_of_distinct_numbers}")
-print(f"\nTotal random number needed to have all distinct numbers are : {count}")
+total_distinct_number_digit = int(input("\nHow many digit numbers you want to generate as distinct coupon number : "))
+number=random_numbers(total_distinct_number_digit)
+print(f"\nDistinct digit coupon number is : {number}")
+print(f"\nTotal random number needed to generate coupon number are : {count}")
 
 
