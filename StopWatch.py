@@ -6,6 +6,11 @@
     @Title : Stopwatch
 '''
 import time
+import logging  
+  
+logging.basicConfig(level=logging.DEBUG,filename="test.log")  
+logging.debug('The debug message is logged')  
+
 def stopwatch():
     """ 
         Description: 
@@ -17,7 +22,7 @@ def stopwatch():
     """
     try:
         start_time=time.time()
-        print("\nStopwatch has started")
+        logging.debug("\nStopwatch has started")
         input("\nPress ctrl+C to exit the stopwatch ")        
         while True:
             time.sleep(1)
