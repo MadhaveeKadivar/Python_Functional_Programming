@@ -26,4 +26,4 @@ x_coordinate = int(sys.argv[1])
 y_coordinate  = int(sys.argv[2])
 # Calling Function
 result = distance(x_coordinate,y_coordinate)
-print(f"\nEuclidean distance from the point ({x},{y}) to the origin (0,0) is : {result}")
+print(f"\nEuclidean distance from the point ({x_coordinate},{y_coordinate}) to the origin (0,0) is : {result}")
